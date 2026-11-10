@@ -88,7 +88,7 @@ h1, h2, h3 { color: #111; letter-spacing: -0.01em; }
 
 /* Print the location instead of whatever word the typing line happens to show */
 .eyebrow .typed { display: none !important; }
-.eyebrow::after { content: "Bangalore"; }
+.eyebrow::after { content: " · Bangalore"; }
 
 /* Screen-only flourishes */
 .marquee, .nav-ind { display: none !important; }
@@ -113,3 +113,11 @@ h1, h2, h3 { color: #111; letter-spacing: -0.01em; }
 .about-quote em { color: #111 !important; font-style: normal !important; }
 
 .hv-log { display: none !important; }
+
+.typed-line { display: none !important; }
+.abbr { font-size: 7pt; color: #555 !important; border: 0; padding: 0; margin-left: 3pt; vertical-align: baseline; }
+.role h3 { display: block; }
+
+
+.t-item::after { display: none !important; }
+.timeline { margin-left: 0 !important; }
