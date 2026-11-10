@@ -22,3 +22,12 @@ Push the folder to GitHub and enable **Pages** (Settings → Pages → deploy fr
 ## Live site
 
 Published with GitHub Pages at https://srvch.github.io/ (repo `srvch/srvch.github.io`, branch `main`). Push to `main` to update it; changes appear within a minute or two.
+
+## Icon credits
+
+The small icons on the skill chips are inlined as an SVG sprite at the top of `index.html` (no external requests). They come from open-source sets:
+
+- **Technology logos:** [Simple Icons](https://simpleicons.org) v16.37.0 (CC0 1.0), plus the Java and AWS marks from [Devicon](https://devicon.dev) (MIT).
+- **General icons** (SQL, REST APIs, microservices, CI/CD, data structures, low-level and high-level design, LLMs, agents, tools, search): [Lucide](https://lucide.dev) v1.71.0 (ISC License).
+
+Logos are trademarks of their respective owners and are shown only to indicate technologies used.

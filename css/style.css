@@ -392,8 +392,8 @@ body::before {
   background: var(--surface); color: var(--text); transition: color .2s, border-color .2s, transform .2s;
 }
 .chips li:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
-.chips li.primary { background: color-mix(in srgb, var(--accent) 14%, transparent); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); color: var(--accent); font-weight: 500; }
-.chips li.primary::after { content: "primary"; margin-left: 6px; font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; opacity: .75; }
+.chips li.primary { background: var(--surface); border-color: var(--accent); color: var(--text); font-weight: 500; }
+.chips li.primary::after { content: "primary"; margin-left: 6px; font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); font-weight: 600; }
 /* Chips pop in one after another once their card is revealed */
 .js .skill-group .chips li { opacity: 0; transform: translateY(8px) scale(.96); }
 .js .skill-group.in .chips li {
@@ -858,3 +858,18 @@ button.btn { font: inherit; font-weight: 500; cursor: pointer; }
   .award h3 { font-size: .98rem; min-width: 0; }
   .award .date { font-size: .7rem; padding: 3px 9px; white-space: nowrap; flex: none; }
 }
+
+/* ---------- Tech logos in skill chips: one green tint, brand colour on hover ---------- */
+.chips li { display: inline-flex; align-items: center; gap: 7px; }
+.ti { width: 15px; height: 15px; flex: none; color: var(--accent); fill: currentColor; transition: color .2s, transform .2s; }
+.ti.stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.chips li:hover .ti { color: var(--b, var(--accent)); transform: scale(1.12); }
+.chips li.primary::after { margin-left: 0; }
+@media (prefers-reduced-motion: reduce) { .ti { transition: none; } .chips li:hover .ti { transform: none; } }
+
+
+/* ---------- Tech logos in their original brand colours at rest (generic icons stay green) ---------- */
+.ti { color: var(--b, var(--accent)); }
+/* Dark themes: lift the darker brand blues so they stay readable */
+:root[data-theme="dark"] .ti { color: color-mix(in srgb, var(--b, var(--accent)) 72%, #fff); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ti { color: color-mix(in srgb, var(--b, var(--accent)) 72%, #fff); } }
