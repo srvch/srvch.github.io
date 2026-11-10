@@ -25,9 +25,10 @@ Published with GitHub Pages at https://srvch.github.io/ (repo `srvch/srvch.githu
 
 ## Icon credits
 
-The small icons on the skill chips are inlined as an SVG sprite at the top of `index.html` (no external requests). They come from open-source sets:
+The small icons are inlined as an SVG sprite at the top of `index.html` (no external requests). They come from open-source sets:
 
-- **Technology logos:** [Simple Icons](https://simpleicons.org) v16.37.0 (CC0 1.0), plus the Java and AWS marks from [Devicon](https://devicon.dev) (MIT).
-- **General icons** (SQL, REST APIs, microservices, CI/CD, data structures, low-level and high-level design, LLMs, agents, tools, search): [Lucide](https://lucide.dev) v1.71.0 (ISC License).
+- **Technology logos** (Java, Spring Boot, Redis, Kafka, Docker, ...): [SVG Logos](https://github.com/gilbarbara/logos) by Gil Barbara (CC0 1.0).
+- **Modern icons** (skill card headers, SQL, REST APIs, CI/CD, agents, tool calling, search, data structures, low/high-level design, the trophy and award ribbon): [Fluent UI System Color Icons](https://github.com/microsoft/fluentui-system-icons) by Microsoft (MIT License).
+- **Illustrated icons** (graduation cap, package, brain): [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) by Microsoft, flat style (MIT License).
 
 Logos are trademarks of their respective owners and are shown only to indicate technologies used.

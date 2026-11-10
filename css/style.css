@@ -873,3 +873,40 @@ button.btn { font: inherit; font-weight: 500; cursor: pointer; }
 /* Dark themes: lift the darker brand blues so they stay readable */
 :root[data-theme="dark"] .ti { color: color-mix(in srgb, var(--b, var(--accent)) 72%, #fff); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ti { color: color-mix(in srgb, var(--b, var(--accent)) 72%, #fff); } }
+
+/* ---------- Skills cards: neutral instead of a green wash (works better with the brand-colour logos) ---------- */
+.skill-group {
+  --card-bg: var(--surface); border-color: var(--border);
+  box-shadow: 0 1px 2px rgba(20, 20, 18, .04), 0 16px 32px -24px rgba(20, 20, 18, .22);
+}
+:root[data-theme="dark"] .skill-group { box-shadow: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .skill-group { box-shadow: none; } }
+.skill-group:hover { border-color: var(--accent); }
+/* Chips are white too (their thin border defines them); the group icon tile is a quiet neutral */
+.chips li, .chips li.primary { background: var(--surface); }
+.sg-head .icon { background: color-mix(in srgb, var(--text) 5%, var(--surface)); }
+
+/* ---------- Education / award icons: full-colour illustrated icons (Fluent Emoji, flat) ---------- */
+.icon svg.ph { width: 30px; height: 30px; fill: none; }
+/* Neutral tile so the real colours carry the look */
+.edu-card .icon, .award .icon { background: color-mix(in srgb, var(--text) 5%, var(--surface)); }
+
+/* Dark mode: keep a light tile behind the full-colour icons so dark shades (the purple cap) stay visible */
+:root[data-theme="dark"] .edu-card .icon, :root[data-theme="dark"] .award .icon { background: #f1eee8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .edu-card .icon, :root:not([data-theme="light"]) .award .icon { background: #f1eee8; } }
+
+/* ---------- Skills: full-colour illustrated icons for generic chips and card headers ---------- */
+.ti.col { width: 17px; height: 17px; fill: none; }
+.chips li:hover .ti.col { transform: scale(1.15); }
+.sg-head .icon svg.ph { width: 26px; height: 26px; }
+/* Dark mode: same light tile behind the card-header icons so dark shades stay visible */
+:root[data-theme="dark"] .sg-head .icon { background: #f1eee8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sg-head .icon { background: #f1eee8; } }
+
+/* ---------- Official multicolour technology logos (SVG Logos). Unspecified fills follow the text colour, so black logo parts stay visible in dark mode. ---------- */
+.ti.logo { width: 17px; height: 17px; fill: var(--text); }
+.chips li:hover .ti.logo { transform: scale(1.15); }
+
+/* Dark mode: official logos sit on a small light plate so dark logo parts (Kafka, AWS lettering) stay visible */
+:root[data-theme="dark"] .ti.logo { background: #f1eee8; border-radius: 4px; padding: 1.5px; box-sizing: content-box; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ti.logo { background: #f1eee8; border-radius: 4px; padding: 1.5px; box-sizing: content-box; } }
