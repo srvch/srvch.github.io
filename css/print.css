@@ -84,7 +84,7 @@ h1, h2, h3 { color: #111; letter-spacing: -0.01em; }
 /* Headline words and typed line must be plain text in print */
 .hero h1 .w { overflow: visible; display: inline; padding: 0; margin: 0; }
 .hero h1 .w > span { transform: none !important; color: #111 !important; -webkit-text-fill-color: #111 !important; display: inline; }
-.caret, .scroll-cue, .hv-packet { display: none !important; }
+.caret, .hv-packet { display: none !important; }
 
 /* Print the location instead of whatever word the typing line happens to show */
 .eyebrow .typed { display: none !important; }

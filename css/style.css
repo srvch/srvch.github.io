@@ -542,19 +542,10 @@ html { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--text) 28
   40%, 100% { stroke: color-mix(in srgb, var(--accent) 45%, var(--border)); stroke-width: 1.5; }
 }
 
-/* Scroll cue */
-.hero { position: relative; }
-.scroll-cue { position: absolute; left: 50%; bottom: 4px; transform: translateX(-50%); transition: opacity .4s; }
-.scroll-cue.hide { opacity: 0; pointer-events: none; }
-.mouse { display: block; width: 22px; height: 34px; border: 2px solid var(--muted); border-radius: 12px; position: relative; opacity: .8; }
-.mouse span { position: absolute; left: 50%; top: 6px; width: 3px; height: 7px; margin-left: -1.5px; border-radius: 2px; background: var(--accent); animation: wheel 1.8s ease-in-out infinite; }
-@keyframes wheel { 0% { opacity: 0; transform: translateY(0); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(12px); } }
-@media (max-width: 760px) { .scroll-cue { display: none; } }
-
 @media (prefers-reduced-motion: reduce) {
   .hero h1 .w > span { transform: none; animation: none; }
   .hero h1 .grad > span { animation: none; }
-  .caret, .mouse span, .hv-in .hv-node.out { animation: none; }
+  .caret, .hv-in .hv-node.out { animation: none; }
   .hv-packet { display: none; }
 }
 

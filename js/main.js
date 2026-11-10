@@ -206,14 +206,6 @@
     })();
   }
 
-  // ----- Scroll cue fades once you start scrolling -----
-  var cue = document.getElementById("scroll-cue");
-  if (cue) {
-    var cueTick = function () { cue.classList.toggle("hide", window.scrollY > 80); };
-    window.addEventListener("scroll", cueTick, { passive: true });
-    cueTick();
-  }
-
   // ----- Card edge glow + 3D tilt (mouse only) -----
   [".t-card", ".skill-group", ".edu-card", ".award", ".stats li"].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.classList.add("glow"); });
