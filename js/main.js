@@ -264,6 +264,16 @@
     };
   }
 
+  // ----- Click a session card in the hero diagram to fire a click ripple -----
+  document.querySelectorAll(".hv-session").forEach(function (g) {
+    g.addEventListener("click", function () {
+      g.classList.remove("is-click");
+      void g.getBoundingClientRect(); // restart the animation
+      g.classList.add("is-click");
+      setTimeout(function () { g.classList.remove("is-click"); }, 750);
+    });
+  });
+
   // ----- Footer year -----
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

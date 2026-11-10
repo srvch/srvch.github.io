@@ -100,3 +100,16 @@ h1, h2, h3 { color: #111; letter-spacing: -0.01em; }
 .profile { display: none !important; }
 
 .toast { display: none !important; }
+
+/* About story: one compact flowing paragraph for print */
+.story-kicker, .beat { display: none !important; }
+.about-text { display: block; }
+.about-text .story-lead, .story-body, .story-body p, .about-quote, .beat-text { display: inline !important; }
+.about-text .story-lead, .beat-text, .about-quote {
+  font: 400 8.6pt/1.45 "Inter", Arial, sans-serif !important; letter-spacing: 0 !important; color: #111 !important;
+}
+.story-body p::after, .about-text .story-lead::after { content: " "; }
+.about-quote { border: 0 !important; padding: 0 !important; margin: 0 !important; font-style: normal !important; }
+.about-quote em { color: #111 !important; font-style: normal !important; }
+
+.hv-log { display: none !important; }
